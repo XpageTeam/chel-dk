@@ -8,7 +8,80 @@ html(lang="ru")
 	body.main.loading
 		include inc/header.pug
 		main#content
-			.wrapper
-				
+			section.main-banner
+				picture.main-banner__img
+					source(srcset="img/photos/main-banner-img.jpg" media="(min-width: 660px)")
+					source(srcset="img/photos/main-banner-img.jpg" media="(max-width: 660px)")
+					img(src="img/photos/main-banner-img.jpg")
+				.main-banner__text
+					.wrapper
+						.mb-text
+							.mb-text__title «Без паники. Как сохранить финансовую стабильность?»
+							.mb-text__subtitle Бесплатная онлайн-конференция
+							.mb-text__label Дата проведения 23 апреля 2020 г, 11:00-13:00
+							.mb-text__btns
+								.mbt-btns
+									.mbt-btns__btn
+										a.default-btn.scrollTo(href="#reg")
+											span.default-btn__text Регистрация
+									.mbt-btns__btn
+										a.default-btn.default-btn--bordered.scrollTo(href="#about")
+											span.default-btn__text Подробнее
+			section.main-reg__cont
+				.wrapper
+					.main-reg
+						.main-reg__text
+							p Зарегистрируйтесь, и в день мероприятия мы отправим вам  
+								i ссылку
+								|   на конференцию
+						.main-reg__btn
+							a.default-btn.scrollTo(href="#reg")
+								span.default-btn__text Регистрация
+			section.about__cont
+				.wrapper
+					.about#about
+						.about__title Подробнее об конференции
+						.about__text
+							p Многие компании этой весной оказались заложниками непростой эпидемиологической ситуации из-за вируса COVID-19.  CHEL.DK.RU попросил экспертов поделиться рекомендациями, как бизнесу адаптироваться к нынешней ситуации, не остановиться в развитии, а возможно – даже преуспеть и нащупать новые точки роста.
+			section.faq__cont
+				.wrapper
+					.faq
+						.faq__list
+							.fq-list
+								.fq-list__title Вопросы к обсуждению на онлайн-конференции:
+								.fq-list__list
+									ul.fql
+										each item in ["Кредитная нагрузка на бизнес в кризис: как договориться с банком о реструктуризации долга?", "Меры государственной поддержки малому и среднему бизнесу из-за приостановки деятельности на время эпидемии.", "Насколько удачной инвестицией может оказаться сейчас покупка недвижимости? Ожидается ли рост ипотечных ставок?", "Фондовый рынок: какие инвестиции принесут высокую доходность с гарантированной защитой капитала?", "Экспертный прогноз изменений в экономике, которые может повлечь эпидемия коронавируса: насколько сильной будет просадка, какие сферы особенно подвержены рискам", "Налогообложение вкладов свыше 1 млн руб.: насколько заметно отразится эта мера на доходности, какие шаги предпринять для сохранения капитала?", "Прогноз по валютным курсам: как диверсифицировать инвестиционный портфель, чтобы снизить риски, стоит ли переводить накопления в валюту?", ]
+											li
+												a.fql__link(href="#")=item
+						.faq__logo
+							figure.fq-logo
+								img(src="img/white-logo.svg")
+			section.partners__cont
+				.wrapper
+					.partners
+						.partners__title Партнёр конференции
+						.partners__list
+							.pt-list
+								a.pt-list__item(href="#") 
+									img(src="img/photos/partner.jpg")
+			section.speakers__cont
+					.speakers
+						.wrapper
+							.speakers__title Спикеры
+						.speakers__list
+							.spk-list
+								each speaker, i in [{name: "Константин Ордов", about: "Профессор кафедры финансового менеджмента Российского экономического университета имени Плеханова, практикующий оценщик бизнеса и финансовый консультант", subj: "“Как трансформировать бизнес, чтобы не остаться на плаву?”"}, {name: "Павел Самиев", about: "Заместитель генерального директора Ассоциации развития финансовой грамотности, управляющий директор агентства \"Эксперт РА\", управляющий партнер НАФИ, управляющий директор НРА, основатель и генеральный директор аналитического агентства \"БизнесДром\", председатель Комитета \"ОПОРЫ РОССИИ\" по финансовым рынкам.", subj: "“Меры поддержки МСП, налогообложение вкладов, инвестиции в недвижимость. Какие финансовые мошенники сейчас активизировались и как им противостоять”"}, {name: "Олег Пермяков", about: "Генеральный директор Корпорации \"СТРАТУМ\"", subj: "“Прогноз по валютным курсам: как диверсифицировать инвестиционный портфель, чтобы снизить риски, стоит ли переводить накопления в валюту?”"}, {name: "Дамир Халипов", about: "Генеральный директор Корпорации \"СТРАТУМ\"", subj: "“Продажи через соцсети, как превратить трафик в деньги и выжить за счет доставки”"}, ]
+									.spk-list__item
+										.wrapper
+											.speaker
+												figure.speaker__photo
+													img(src="img/photos/speaker-photo-"+i+".jpg")
+												.speaker__name=speaker.name
+												.speaker__about=speaker.about
+												.speaker__subject
+													.speaker__subject-title О чем будет говорить?
+													.speaker__subject-text
+														p=speaker.subj
 		include inc/footer.pug
 		include inc/scripts.pug

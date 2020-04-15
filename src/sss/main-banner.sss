@@ -1,0 +1,57 @@
+.main-banner
+	position: relative
+	color: #fff
+
+	&__img
+		position: absolute 0
+
+		img
+			position: absolute 0 0 * *
+			size: 100%
+			object-fit: cover
+			object-position: top center
+			display: block
+
+	&__text
+		padding: 213px 0 114px
+		position: relative
+		z-index: 2
+
+.mb-text
+	text-align: center
+
+	&__title
+		font-weight: bold
+		font-size: em(64)
+		line-height: 1.2
+		margin: 0 0 30px
+
+	&__subtitle
+		font-weight: 500
+		font-size: em(30)
+		margin: 0 0 60px
+
+	&__label
+		display: inline-block
+		background-color: var(--main-color)
+		font-size: em(26)
+		font-weight: 500
+		padding: 0 6px
+		margin: 0 0 35px
+
+.mbt-btns
+	display: inline-flex
+
+	&__btn
+
+		&:not(:last-child)
+			margin-right: 44px
+
+		.default-btn
+
+			&--bordered
+				color: #fff
+				border-color: currentColor
+
+				&:hover
+					border-color: var(--main-color)

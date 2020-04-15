@@ -1,0 +1,75 @@
+.faq
+	display: flex
+	justify-content: space-between
+
+	&__cont
+		padding: 50px 0
+		overflow: hidden
+
+	&__list, &__logo
+		width: calc(50% - 22px)
+
+	&__logo
+		padding: 154px 0 0
+
+.fq-list
+	position: relative
+	padding: 35px 26px 35px 0
+
+	&::before
+		content: ""
+		pointer-events: none
+		position: absolute 0 0 0 *
+		background-color: var(--second-color)
+		width: calc(50vw - 22px)
+
+	&__title, &__list
+		position: relative
+		z-index: 1
+
+	&__title
+		max-width: 320px
+		font-size: em(22)
+		line-height: calc(40 / 22)
+		letter-spacing: 0.03em
+		margin: 0 0 28px
+
+.fql
+
+	li
+		border-left: 1px solid var(--main-color)
+		padding-left: 30px
+
+		&:not(:first-child)
+			margin: 26px 0 0
+
+	&__link
+		letter-spacing: 0.03em
+		line-height: calc(24 / 14)
+		position: relative
+
+		&:after
+			content: ""
+			position: absolute
+			left: 0
+			right: 0
+			bottom: -6px
+			height: 1px
+			background-color: var(--main-color)
+			transition: transform .3s ease
+			transform-origin: left
+
+.fq-logo
+	position: relative
+
+	img
+		position: relative
+		z-index: 1
+		display: block
+
+	&::before
+		content: ""
+		position: absolute 0 * 0 0
+		width: calc(50vw - 22px)
+		background-color: #CD1719
+		opacity: 0.1

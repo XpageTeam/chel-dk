@@ -1,1 +1,21 @@
 header.head
+	.wrapper
+		.head__wrap
+			.head__logo
+				a.lgoo(href="#")
+					img(src="img/logo.svg")
+			nav.head__nav
+				ul.h-menu
+					li
+						a.h-menu__link(href="#speakers") Спикеры
+					li
+						a.h-menu__link(href="#contacts") Контакты
+			.head__btns
+				.h-btns
+					.h-btns__btn
+						a.default-btn.scrollTo(href="#reg") 
+							span.default-btn__text Регистрация
+					.h-btns__btn
+						a.default-btn(href="#")
+							include ../../img/ico-lc.svg
+							span.default-btn__text Личный кабинет

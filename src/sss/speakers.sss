@@ -1,0 +1,58 @@
+.speakers
+
+	&__cont
+		padding: 70px 0 50px
+
+	&__title
+		font-weight: bold
+		font-size: em(50)
+		letter-spacing: 0.03em
+		margin: 0 0 45px
+
+.spk-list
+
+	&__item
+
+		&:first-child
+
+			.speaker
+				padding-top: 0
+
+		&:nth-child(even)
+			background-color: var(--second-color)
+
+.speaker
+	padding: 50px 0
+	display: grid
+	grid-template-areas: "img name" "img about" "img subj"
+	grid-template-columns: 268px 1fr
+	grid-template-rows: auto auto 1fr
+	gap: 20px 40px
+
+	&__photo
+		grid-area: img
+
+		img
+			width: 100%
+			display: block
+
+	&__name
+		grid-area: name
+		font-size: em(35)
+		line-height: 131%
+		font-weight: bold
+
+	&__about
+		grid-area: about
+		line-height: calc(24 / 14)
+		color: rgba(0,0,0, .5)
+
+	&__subject
+		grid-area: subj
+
+		&-title
+			margin: 0 0 5px
+
+		&-text
+			font-size: em(22)
+			line-height: calc(35 / 22)
