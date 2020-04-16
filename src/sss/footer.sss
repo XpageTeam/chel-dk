@@ -1,0 +1,36 @@
+.footer
+	background-color: var(--second-color)
+	padding: 35px 0 38px
+
+	&__wrap
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+.dev
+	display: block
+
+	img
+		display: inherit
+
+.copy
+	letter-spacing: 0.03em
+
+	a
+		color: rgba(0, 0, 0, .5)
+
+@media (max-width: 1300px) and (min-width: 660px)
+	.footer
+		padding: 26px 0
+
+@media (max-width: 660px)
+	.footer
+		padding: 20px 0
+
+		&__wrap
+			display: block
+			text-align: center
+
+		&__dev
+			margin: 20px 0 0
+			display: inline-block

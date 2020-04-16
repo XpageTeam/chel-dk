@@ -17,3 +17,89 @@
 
 	&__btn
 		margin: 55px 0 0
+
+.mr-video
+	display: inline-block
+	border: 1px solid rgba(0, 0, 0, .1)
+	padding: 18px
+	position: relative
+
+	&__img
+		position: relative
+
+		&:after
+			content: ""
+			position: absolute
+			top: calc(50% - height("../img/ico-play.png") / 3 / 2)
+			left: calc(50% - width("../img/ico-play.png") / 3 / 2)
+			background: url("../img/ico-play.png") no-repeat
+			background-size: contain
+			size: calc(width("../img/ico-play.png") / 3) calc(height("../img/ico-play.png") / 3)
+
+	&__title
+		position: absolute 48px * * 18px
+		padding: 0 20px 0 54px
+		color: #fff
+		text-align: left
+		font-weight: bold
+		font-size: em(13)
+
+		&:before
+			content: ""
+			position: absolute 0 * * 22px
+			background: url("../img/ico-live.svg") no-repeat
+			size: 22px 14px
+
+
+@media (max-width: 1400px) and (min-width: 1300px)
+	.main-reg
+		font-size: 12px
+
+		&__cont
+			padding: 80px 0
+
+@media (max-width: 1300px) and (min-width: 1000px)
+	.main-reg
+		font-size: 11px
+		
+		&__cont
+			padding: 60px 0
+
+@media (max-width: 1000px) and (min-width: 660px)
+	.main-reg
+		font-size: 9px
+		
+		&__cont
+			padding: 40px 0
+
+		&__btn
+			margin: 20px 0 0
+
+@media (max-width: 660px)
+	.main-reg
+		font-size: 8px
+
+		&__text
+			font-size: 2.2em
+		
+		&__cont
+			padding: 30px 0
+
+		&__btn
+			margin: 20px 0 0
+
+	.mr-video
+		padding: 0
+		border: none
+		display: flex
+		flex-direction: column-reverse
+
+		&__title
+			color: #000
+			position: static
+			margin: 0 0 20px
+			font-size: 10px
+			padding: 0 0 0 25px
+
+			&:before
+				left: 0

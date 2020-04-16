@@ -41,10 +41,14 @@
 			&:not(:active)
 				color: #fff var(--main-color)
 
-	&--loading
+	&--white
+		color: #000 #fff !important
 
-		svg
-			animation: loading 1s linear infinite
+		&:hover, &:focus
+
+			&:not(:active)
+				color: #fff !important
+				background-color: lighten(#CD1719, .1) !important
 
 @keyframes loading
 	0%

@@ -10,6 +10,8 @@
 @import "my-select.sss"
 
 @import "header.sss"
+@import "footer.sss"
+@import "title-bkock.sss"
 
 @import "main-banner.sss"
 @import "main-reg.sss"
@@ -17,3 +19,38 @@
 @import "faq.sss"
 @import "partners.sss"
 @import "speakers.sss"
+@import "moder.sss"
+@import "contacts-reg.sss"
+@import "auth-form.sss"
+
+
+.inner-content
+	margin: 50px 0 0
+	display: flex
+	flex-direction: column
+	flex: 1 1 auto
+	justify-content: center
+
+	&__title
+		flex: none
+
+	&__content
+
+		&:not(:first-child)
+			margin: 45px 0
+
+@media (max-width: 1400px) and (min-width: 660px)
+	.inner-content
+
+		&__content
+
+			&:not(:first-child)
+				margin: 25px 0
+
+@media (max-width: 660px)
+	.inner-content
+
+		&__content
+
+			&:not(:first-child)
+				margin: 25px 0 0

@@ -1,0 +1,84 @@
+.moder
+	display: flex
+	align-items: center
+	padding: 31px 28px
+	color: #fff var(--main-color)
+
+	&__cont
+		padding: 50px 0 41px
+
+	&__photo
+		flex: none
+		width: 268px
+		margin-right: 62px
+
+		img
+			display: block
+			width: 100%
+
+	&__desc
+
+		&-title
+			font-size: em(22)
+			letter-spacing: 0.03em
+			margin: 0 0 22px
+
+		&-name
+			font-weight: bold
+			font-size: em(35)
+
+		&-subtitle
+			margin: 12px 0
+
+@media (max-width: 1400px) and (min-width: 1300px)
+	.moder 
+		font-size: 12px
+
+		&__cont
+			padding: 40px 0 35px
+
+@media (max-width: 1300px) and (min-width: 1000px)
+	.moder 
+		font-size: 11px
+
+		&__cont
+			padding: 35px 0 30px
+
+		&__photo
+			width: 220px
+			margin-right: 20px
+
+		&__desc
+
+			&-subtitle
+				font-size: 14px
+
+
+@media (max-width: 1000px) and (min-width: 600px)
+	.moder
+		font-size: 10px
+		padding: 20px
+
+		&__cont
+			padding: 15px 0
+
+		&__photo
+			width: 150px
+			margin-right: 20px
+
+@media (max-width: 660px)
+	.moder
+		font-size: 10px
+		padding: 20px
+		display: block
+
+		&__cont
+			padding: 0 0 20px
+			margin: -15px 0 0
+
+			.wrapper
+				padding: 0
+
+		&__photo
+			width: 100%
+			margin: 0 0 25px

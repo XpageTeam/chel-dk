@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Авторизация
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		include inc/header.pug
+		main#content
+			.inner-content
+				.inner-content__title
+					.wrapper
+						.title-block
+							.title-block__title
+								h1 Авторизация
+				.inner-content__content
+					.wrapper
+						.auth-form
+							.auth-form__form
+								.reg
+									form
+										.form__inputs
+											.form__inputs-input
+												.default-input
+													input.default-input__input(type="email" placeholder="Ваш e-mail" required="")
+													label.default-input__label E-mail
+											.form__inputs-input
+												.default-input
+													input.default-input__input(type="password" placeholder="Ваш пароль" required="")
+													label.default-input__label Пароль
+										.reg__submit
+											.reg__submit-btn
+												input.default-btn.default-btn--white(type="submit" value="Войти")
+		include inc/footer.pug
+		include inc/scripts.pug

@@ -1,0 +1,159 @@
+.contacts-reg
+	display: grid
+	grid-template-columns: repeat(2, 1fr)
+	grid-template-areas: "contTitle contTitle" "contacts regTitle" "contacts reg" "logo reg"
+	grid-template-rows: repeat(3, auto) 1fr
+	gap: 44px 47px
+	letter-spacing: 0.03em
+
+	&__cont
+		padding: 41px 0 110px
+
+	&__title
+		font-weight: bold
+		font-size: em(40)
+
+		&--contacts
+			grid-area: contTitle
+
+		&--reg
+			grid-area: regTitle
+
+	&__contacts
+		grid-area: contacts
+
+	&__logo
+		grid-area: logo
+		padding: 25px 0 0
+
+	&__reg
+		grid-area: reg
+
+.contacts
+	background-color: var(--second-color)
+	padding: 50px 55px 55px
+
+	&__item
+		max-width: 255px
+
+		&:not(:first-child)
+			margin: 30px 0 0
+		
+		&-title
+			line-height: calc(22 / 14)
+
+		&-text
+			display: flex
+			flex-direction: column
+			align-items: flex-start
+			font-weight: 500
+			font-size: em(22)
+
+.reg
+	color: #fff var(--main-color)
+	padding: 40px 50px 65px
+
+	&__submit
+		display: flex
+		align-items: flex-end
+		margin: 40px 0 0
+
+		&-btn
+			margin-right: 10px
+
+		&-text
+			font-size: em(12)
+			line-height: 164%
+
+			a
+				border-bottom: 1px solid #fff
+
+	.default-input
+		
+		&__label
+			position: absolute
+			left: 0
+			bottom: 3px
+			color: #fff
+
+			&:after
+				color: currentColor !important
+
+		&__error
+			color: #fff
+		
+		&__input
+			border-radius: 0
+			background: none
+			border: none
+			height: 47px
+			padding-left: 140px
+			border-bottom: 1px solid rgba(255,255,255, .5)
+
+			&--error:not(:focus):not(:valid), &:focus
+				border-color: #fff !important
+
+			&::-webkit-input-placeholder
+				color: rgba(255, 255, 255, .5)
+
+			&:-moz-placeholder
+				color: rgba(255, 255, 255, .5)
+
+			&::-moz-placeholder
+				color: rgba(255, 255, 255, .5)
+
+			&:-ms-input-placeholder
+				color: rgba(255, 255, 255, .5)
+
+
+@media (max-width: 1400px) and (min-width: 1300px)
+	.contacts-reg
+		gap: 30px
+		
+		&__cont
+			padding: 40px 0 80px
+
+		&__title
+			font-size: 2.4em
+
+@media (max-width: 1300px) and (min-width: 1000px)
+	.contacts-reg
+		gap: 25px 35px
+		
+		&__cont
+			padding: 30px 0 50px
+
+		&__title
+			font-size: 2.2em
+
+	.contacts, .reg
+		padding: 30px
+
+@media (max-width: 1000px)
+	.contacts-reg
+		gap: 20px
+		grid-template-columns: 100%
+		grid-template-areas: "contTitle" "contacts" "regTitle" "reg"
+
+		&__cont
+			padding: 15px 0 0
+
+
+		&__title
+			font-size: 2.2em
+
+		&__logo
+			display: none
+
+	.reg, .contacts
+		padding: 20px
+		margin: 0 -20px
+
+@media (max-width: 660px)
+	.reg
+		
+		&__submit
+			display: block
+
+			&-btn
+				margin: 0 0 25px

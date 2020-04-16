@@ -56,3 +56,64 @@
 		&-text
 			font-size: em(22)
 			line-height: calc(35 / 22)
+
+@media (max-width: 1400px) and (min-width: 1300px)
+	.speakers
+		font-size: 12px
+
+		&__cont
+			padding: 40px 0
+
+		&__title
+			margin: 0 0 30px
+
+@media (max-width: 1300px) and (min-width: 1000px)
+	.speakers
+		font-size: 11px
+
+		&__cont
+			padding: 35px 0
+
+		&__title
+			margin: 0 0 25px
+
+	.speaker
+		grid-template-columns: 220px 1fr
+		gap: 20px
+		padding: 35px 0
+
+@media (max-width: 1000px) and (min-width: 660px)
+	.speakers
+		font-size: 9px
+
+		&__cont
+			padding: 15px 0
+
+		&__title
+			margin: 0 0 20px
+
+	.speaker
+		grid-template-columns: 140px 1fr
+		gap: 20px
+		padding: 35px 0
+
+		&__about, &__subject-title
+			font-size: 12px
+
+@media (max-width: 660px)
+	.speakers
+		font-size: 9px
+
+		&__cont
+			padding: 15px 0
+
+		&__title
+			margin: 0 0 20px
+			font-size: 2.86em
+
+	.speaker
+		grid-template-columns: 150px 1fr
+		align-items: center
+		grid-template-areas: "img name" "about about" "subj subj"
+		gap: 20px
+		padding: 15px 0
